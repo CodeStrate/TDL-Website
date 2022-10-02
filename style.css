@@ -14,11 +14,11 @@
 
 *::selection{
     background: #ba3530;
-    color: aliceblue;
+    color: azure;
 }
 
 html{
-    font-size: 100.5%;
+    font-size: 62.5%;
     overflow-x: hidden;
 }
 
@@ -48,10 +48,45 @@ header{
 }
 
 header .logo {
-    background: url("../images/SULogo.png") no-repeat top left;
+    /* background: url("../images/SULogo.png") no-repeat top left;
     padding: 0;
     margin: 0;
     width: 150px;
-    height: 90px;
+    height: 90px; */
 
+    color: azure;
+    font-size: 2.5rem;
+
+
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin: 0 1rem;
+}
+
+header .navbar ul li a{
+   font-size: 2rem;
+   color: azure;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color: #444;
+}
+
+header #login{
+    font-size: 3rem;
+    color: azure;
+    cursor: pointer;
+}
+
+header #login:hover{
+    color: #444;
 }
