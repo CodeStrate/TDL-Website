@@ -1,5 +1,5 @@
 :root{
-    --gradient:linear-gradient(90deg, #ba3530, #cccbca);
+    --gradient:linear-gradient(90deg, #d30000, #6f6f6f);
 }
 
 *{
@@ -13,7 +13,7 @@
 }
 
 *::selection{
-    background: #ba3530;
+    background: #d30000;
     color: azure;
 }
 
@@ -23,16 +23,16 @@ html{
 }
 
 html::-webkit-scrollbar-track{
-    background: #333;
+    background: #6f6f6f;
 }
 
 html::-webkit-scrollbar-thumb{
-    background:linear-gradient(#cccbca, #ba3530);
+    background:linear-gradient(#6f6f6f, #d30000);
 }
 
-/*body{*/
-/*    height: 300rem;*/
-/*}*/
+body{
+   height: 300rem;
+}
 
 header{
     width: 100%;
@@ -48,16 +48,14 @@ header{
 }
 
 header .logo {
-    /* background: url("../images/SULogo.png") no-repeat top left;
-    padding: 0;
-    margin: 0;
-    width: 150px;
-    height: 90px; */
+    width: 80px;
+    height: 40px;
 
-    color: azure;
-    font-size: 2.5rem;
+}
 
-
+header .logo img{
+    width: 80px;
+    height: 40px;
 }
 
 header .navbar ul{
@@ -89,4 +87,101 @@ header #login{
 
 header #login:hover{
     color: #444;
+}
+
+header #menu{
+   font-size: 3rem;
+   color: azure;
+   cursor: pointer;
+}
+
+
+.login-form{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form form{
+    width: 35rem;
+    background: azure;
+    margin: 0 2rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .3rem #444;
+    position: relative;
+}
+
+.login-form form h3{
+    font-size: 3rem;
+    color: #d30000;
+    padding: 1rem 0;
+}
+
+.login-form form .box{
+    width: 100%;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+
+    header #menu {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top:-120%; left:0;
+        width: 100%;
+        background: #9b9b9b;
+    }
+
+    header .navbar ul {
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    header .navbar ul li {
+        max-width: 1.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        color: #ff5252;
+    }
+    .fa-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        top: 6.4rem;
+    }
 }
