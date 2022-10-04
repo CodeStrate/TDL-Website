@@ -34,6 +34,17 @@ body{
    height: 300rem;
 }
 
+.btn{
+    padding: .7rem 3rem;
+    font-size: 2rem;
+    color: azure;
+    background:var(--gradient);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.4);
+}
+
 header{
     width: 100%;
     display: flex;
@@ -54,8 +65,8 @@ header .logo {
 }
 
 header .logo img{
-    width: 80px;
-    height: 40px;
+    width: 110px;
+    height: 45px;
 }
 
 header .navbar ul{
@@ -100,12 +111,16 @@ header #menu{
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 0; left: 0;
+    top: -120%; left: 0;
     z-index: 1000;
     background: rgba(0,0,0,.5);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.login-form.popup{
+    top: 0;
 }
 
 .login-form form{
@@ -126,17 +141,57 @@ header #menu{
 
 .login-form form .box{
     width: 100%;
-    padding: 0;
+    padding:1rem 0;
+    margin: 1rem 0;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color: #444;
+    text-transform: none;
+}
+
+.login-form form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.login-form form .box:focus{
+    border-color: #d30000;
+}
+
+.login-form form .box:nth-child(3){
+    margin-bottom: 5rem;
+}
+.login-form form p{
+    font-size: 1.4rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.login-form form p a{
+    color: #ff5252;
+}
+
+.login-form form .btn{
+    width: 100%;
+    margin: 2rem 0;
 }
 
 
+.login-form form .btn:hover{
+    background: #444;
+}
 
 
+.login-form form .fa-times{
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #9b9b9b;
+}
 
-
-
-
-
+.login-form form .fa-times:hover{
+    color: #444;
+}
 
 
 
@@ -182,6 +237,12 @@ header #menu{
     }
 
     header .navbar.nav-toggle{
-        top: 6.4rem;
+        top: 8rem;
     }
 }
+
+/* media queries login-form */
+@media (max-width:500px){
+    html{
+        font-size: 50%;
+    }}
