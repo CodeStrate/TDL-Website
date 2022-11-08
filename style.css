@@ -201,8 +201,18 @@ header #menu{
     flex-flow: column;
  }
 
+.login-form form .btn:hover{
+    background: #444;
+}
 
 
+.login-form form .fa-times{
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #9b9b9b;
+}
 
 
 
@@ -249,12 +259,12 @@ header #menu{
     }
 
     header .navbar.nav-toggle{
-        top: 6.4rem;
+        top: 8rem;
     }
 }
 
+/* media queries login-form */
 @media (max-width:500px){
     html{
         font-size: 50%;
-    }
-}
+    }}

@@ -23,4 +23,7 @@ $(document).ready(function(){
 
     });
 
+     $('.login-form').removeClass('popup');
+    
+
 });
