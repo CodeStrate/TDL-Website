@@ -14,7 +14,7 @@
 
 *::selection{
     background: #d30000;
-    color: azure;
+    color: rgb(255, 247, 249);
 }
 
 html{
@@ -30,8 +30,21 @@ html::-webkit-scrollbar-thumb{
     background:linear-gradient(#6f6f6f, #d30000);
 }
 
-body{
-   height: 300rem;
+section{
+    min-height: 110vh;
+    padding: 1rem 7%;
+    padding-top: 6rem;
+}
+
+.btn{
+    padding: .5rem 3rem;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--gradient);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.4);
 }
 
 header{
@@ -48,14 +61,14 @@ header{
 }
 
 header .logo {
-    width: 80px;
-    height: 40px;
+    width: 105px;
+    height: 44px;
 
 }
 
 header .logo img{
-    width: 80px;
-    height: 40px;
+    width: 105px;
+    height: 44px;
 }
 
 header .navbar ul{
@@ -71,7 +84,7 @@ header .navbar ul li{
 
 header .navbar ul li a{
    font-size: 2rem;
-   color: azure;
+   color: rgb(255, 187, 201);
 }
 
 header .navbar ul li a.active,
@@ -81,7 +94,7 @@ header .navbar ul li a:hover{
 
 header #login{
     font-size: 3rem;
-    color: azure;
+    color: rgb(255, 247, 249);
     cursor: pointer;
 }
 
@@ -91,7 +104,7 @@ header #login:hover{
 
 header #menu{
    font-size: 3rem;
-   color: azure;
+   color: rgb(255, 247, 249);
    cursor: pointer;
 }
 
@@ -100,7 +113,7 @@ header #menu{
     height: 100%;
     width: 100%;
     position: fixed;
-    top: 0; left: 0;
+    top: -120%; left: 0;
     z-index: 1000;
     background: rgba(0,0,0,.5);
     display: flex;
@@ -108,9 +121,13 @@ header #menu{
     justify-content: center;
 }
 
+.login-form.popup{
+    top:0;
+}
+
 .login-form form{
     width: 35rem;
-    background: azure;
+    background: rgb(255, 247, 249);
     margin: 0 2rem;
     padding: 1rem 3rem;
     border-radius: .5rem;
@@ -126,13 +143,63 @@ header #menu{
 
 .login-form form .box{
     width: 100%;
-    padding: 0;
+    padding:1rem 0;
+    margin:1rem 0;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color: #444;
+    text-transform: none;
 }
 
+.login-form form .box::placeholder{
+    text-transform: capitalize;
+ }
 
+ .login-form form .box:focus{
+    border-color: #ff5252;
+ }
 
+ .login-form form .box:nth-child(3){
+    margin-bottom: 5rem;
+ }
 
+ .login-form form p{
+    font-size: 1.4rem;
+    color: #666;
+    padding: .5rem 0;
+ }
+ 
+ .login-form form p a{
+    color: #d30000;
+ }
 
+ .login-form form .btn{
+    width: 100%;
+    margin: 2rem 0;
+ }
+ 
+ .login-form form .btn:hover{
+    background: #444;
+ }
+
+ .login-form form .fa-times{
+    position: absolute;
+    top:1.5rem; right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6f6f6f;
+ }
+
+ .login-form form .fa-times:hover{
+    color: #444;
+ }
+
+ .home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+ }
 
 
 
@@ -143,7 +210,7 @@ header #menu{
 /* media queries */
 @media (max-width:768px){
     html{
-        font-size: 50%;
+        font-size: 55%;
     }
 
     header #menu {
@@ -183,5 +250,11 @@ header #menu{
 
     header .navbar.nav-toggle{
         top: 6.4rem;
+    }
+}
+
+@media (max-width:500px){
+    html{
+        font-size: 50%;
     }
 }
