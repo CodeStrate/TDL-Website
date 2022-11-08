@@ -22,7 +22,7 @@ html{
     overflow-x: hidden;
 }
 
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar{
     background: #6f6f6f;
 }
 
