@@ -199,6 +199,11 @@ header #menu{
     align-items: center;
     justify-content: center;
     flex-flow: column;
+    background:url(../TDL-Website/images/campus\ image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
  }
 
 .login-form form .btn:hover{
