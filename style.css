@@ -45,6 +45,25 @@ section{
     margin-top: 1rem;
     cursor: pointer;
     box-shadow: 0 .1rem .3rem rgba(0,0,0,.4);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: -1rem; left: -100%;
+    background: rgb(235, 235, 235);
+    height: 150%;
+    width: 20%;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transition: .3s linear;
+    left: 120%;
 }
 
 header{
@@ -198,12 +217,37 @@ header #menu{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #000000;
     flex-flow: column;
-    background:url(../TDL-Website/images/campus\ image.jpg) no-repeat;
+    background:url(../images/image.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    position: relative;
     text-align: center;
+ }
+
+ .home h1{
+    font-size: 6rem;
+    color: rgb(255, 247, 249);
+ }
+
+ .home p{
+    font-size: 2rem;
+    color: rgb(255, 241, 241);
+    padding: 1rem 0;
+    width: 70rem;
+ }
+
+ .home .shape{
+    position: absolute;
+    bottom: -.1rem; left: 0;
+    height: 15rem;
+    width: 100%;
+    background: url();
+    block-size: 100rem 15rem;
+    filter: drop-shadow(0, -.1rem .1rem rgba(0, 0, 0,.2));
+    
  }
 
 .login-form form .btn:hover{
@@ -266,6 +310,15 @@ header #menu{
     header .navbar.nav-toggle{
         top: 8rem;
     }
+
+    .home h1{
+        font-size: 4rem;
+    }
+
+    .home p{
+        width: auto;
+    }
+
 }
 
 /* media queries login-form */
