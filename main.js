@@ -1,29 +1,24 @@
-$(document).ready(function(){
+const body = document.querySelector("body"),
+        sidebar = body.querySelector(".sidebar"),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwap = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
 
-    $('#menu').click(function(){
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
 
-    $('#login').click(function(){
-        $('.login-form').addClass('popup');
-    });
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        });
 
-    $('.login-form form .fa-times').click(function(){
-        $('.login-form').removeClass('popup');
-    });
+        modeSwap.addEventListener("click", () => {
+            body.classList.toggle("dark");
 
-
-    $(window).on('load scroll', function(){
-
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
-
-        $('.login-form').removeClass('popup');
-
-    });
-
-     $('.login-form').removeClass('popup');
-    
-
-});
+            if(body.classList.contains("dark")){
+                modeText.innerText = "Light Mode";
+            }else{
+                modeText.innerText = "Dark Mode";
+            }
+        });

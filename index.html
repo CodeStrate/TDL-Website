@@ -2,69 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Edu Website</title>
-
-<!--    google fonts cdn link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<!--    font awesome cdn link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-<!--    custom css stylesheet-->
+    <!-- -------------- CSS ---------------- -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- --------- Boxicons CSS icons --------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-<!--        jquery cdn link-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<!--    custom js file-->
-<script src="main.js"></script>
-<!--header section-->
-<header>
-    <div id="menu" class="fas fa-bars"></div>
-<!--logo-->
-     <div class="logo">
-        <img src="images/SU Logo Monochrome.png" alt="">
-     </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a class="active" href="#homepage">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#form">Form</a></li>
-            <li><a href="#dashboard">DashBoard</a></li>
-        </ul>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="SU_Red.png" alt="SU">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Sushant University</span>
+                    <span class="title">Student</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search-alt icon'></i>
+                        <input type="text" placeholder="Search">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-sitemap icon'></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cart-alt icon'></i>
+                            <span class="text nav-text">Enrolled</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit icon'></i>
+                            <span class="text nav-text">Assignments</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-headphone icon'></i>
+                            <span class="text nav-text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="logout-mode"><a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon' ></i>
+                        <i class='bx bx-sun icon sun' ></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
     </nav>
-    <div id="login" class="fas fa-user-circle"></div>
-</header>
 
-<!-- login form -->
-<div class="login-form">
-    <form action="">
-        <h3>Login</h3>
-        <input type="email" placeholder="username" class="box">
-        <input type="password" placeholder="password" class="box">
-        <p>forgot password? <a href="#">Click Here</a></p>
-        <p>Don't Have an Account? <a href="#">Register Now</a></p>
-        <input type="submit" class="btn" value="login">
-        <i class="fas fa-times"></i>
-    </form>
-</div>
-
-<!-- home section -->
-<section class="home" id="homepage">
-
-    <h1>Trans Disciplinary Learning</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Vel facere doloremque recusandae mollitia. Dicta sit neque rerum saepe fugiat quia adipisci
-    molestiae, sunt, unde, et omnis iste nostrum laborum ad.</p>
-
-    <a href="#"><button class="btn">get started</button></a>
-
-    <div class="shape"></div>
-
-
-</section>
-
+   <!-- ------------------ Home Section ----------------- -->
+   <section class="home">
+    <div class="top">
+        <div class="text">Welcome Back, User!</div>
+        
+    </div>
+    
+   </section>
+    <!-- --------------- JS Script --------------- -->
+    <script src="main.js"></script>
 </body>
 </html>
