@@ -1,0 +1,43 @@
+red - ff012d
+grey - 717171
+
+<div class="data names">
+                    <span class="data-title">Subject</span>
+                    <span class="data-list">Social Media Marketing</span>
+                    <span class="data-list">Web Development</span>
+                    <span class="data-list">Health Law</span>
+                    <span class="data-list">Fashion Design</span>
+                    <span class="data-list">Cyber Security</span>
+                </div>
+                <div class="data type">
+                    <span class="data-title">Assignments</span>
+                    <span class="data-list">Performance Marketing</span>
+                    <span class="data-list">Javascript</span>
+                    <span class="data-list">Rights of Health</span>
+                    <span class="data-list">Case Study: Gucci</span>
+                    <span class="data-list">Penetration Testing</span>
+                </div>
+                <div class="data lecture">
+                    <span class="data-title">Lecture Attended</span>
+                    <span class="data-list">Yes</span>
+                    <span class="data-list">No</span>
+                    <span class="data-list">No</span>
+                    <span class="data-list">Yes</span>
+                    <span class="data-list">Yes</span>
+                </div>
+                <div class="data progress">
+                    <span class="data-title">Submission Status</span>
+                    <span class="data-list">Pending 2022-11-28</span>
+                    <span class="data-list">Submitted 2022-10-15</span>
+                    <span class="data-list">Submitted 2022-10-09</span>
+                    <span class="data-list">Pending 2022-09-18</span>
+                    <span class="data-list">Submitted 2022-09-11</span>
+                </div>
+                <div class="data performance">
+                    <span class="data-title">Subject Response</span>
+                    <span class="data-list">Excellent</span>
+                    <span class="data-list">Average</span>
+                    <span class="data-list">Very Good</span>
+                    <span class="data-list">Good</span>
+                    <span class="data-list">Excellent</span>
+                </div>
