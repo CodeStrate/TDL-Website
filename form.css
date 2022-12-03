@@ -38,8 +38,8 @@
 body.dark{
     /* Colors */
     --back-color: #ff284c;
-    --main-color: #242020;
-    --select-color: #18191A;
+    --main-color: #18191A;
+    --select-color: #242020;
     --form-shadow: 0 60px 40px -30px rgba(216, 216, 216, 0.105);
     --bold-color: #fff;
     --toggle-color: #272727;

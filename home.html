@@ -11,12 +11,19 @@
 
     <!-- -------------- CSS File for home ---------------- -->
     <link rel="stylesheet" href="home.css">
-
-      <!-- --------- Boxicons CSS icons --------- -->
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- --------- Boxicons CSS icons --------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- -------------- Swiper Library ---------------- -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
 </head>
 <body>
+  <div class="loader-wrapper">
+    <span class="loading 1"></span>
+    <span class="loading 1"></span>
+  </div>
     <header>
         <nav class="container">
             <div class="logo">
@@ -25,19 +32,22 @@
             <div class="links">
                 <ul>
                     <li>
-                        <a href="index.html" class="nav-link">Dashboard</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">About</a>
+                      <a href="index.html" class="nav-link">Dashboard</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Courses</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Testimonials</a>
+                        <a href="#courses" class="nav-link">Courses</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
                 <i class='bx bx-moon toggle-btn' ></i>
@@ -46,7 +56,7 @@
     </header>
 
     <main>
-        <section class="showcase-area">
+        <section class="showcase-area section" id="home">
             <img src="./images/square1.png" class="shape square" alt="">
             <div class="container">
                 <div class="showcase-info">
@@ -65,7 +75,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about section" id="about">
             <img src="./images/triangle.png" class="shape triangle" alt="">
             <div class="container">
                 <div class="about-grid">
@@ -392,7 +402,8 @@
             </div>
         </section>
 
-        <section class="progress">
+        <section class="progress section">
+          <img src="./images/triangle.png" class="shape triangle" alt="">
             <div class="container">
                 <div class="progress-info">
                 <h3 class="sub-heading">How's Our Progress?</h3>
@@ -435,8 +446,8 @@
                         <div class="card-desc">
                             <h3>Highly Developed Infrastructure</h3>
                             <p class="text">
-                                Teaching methods have been mastered and perfected by the our masterful tutors.
-                                It ensures what you learn, you never forget.<br>With the use of IoT based online learning,
+                                Mastered and perfected teaching methods.
+                                Ensuring what you learn, you never forget. <br>With the use of intuitive online learning,
                                 now you can learn from the comfort of your home.
                             </p>
                         </div>
@@ -447,7 +458,7 @@
                         <div class="card-desc">
                             <h3>Valuable Off-Campus Support</h3>
                             <p class="text">
-                                MAGIC Cell,an online service made for students, by students, is always up 24*7 <br>
+                                MAGIC Cell, an online service made for students, by students, is always up 24*7
                                 anytime, anywhere and for any kind of query so you don't miss out on the campus life.
                             </p>
                         </div>
@@ -463,13 +474,265 @@
                         </div>
                         <a href="#" class="btn secondary-btn">Explore More</a>
                     </div>
-                    
+                <img src="./images/unused/square2.png" alt="" class="shape square">    
                 </div>
             </div>
         </section>
+
+        <section class="courses section" id="courses">
+          <div class="container">
+            <div class="course-header">
+              <div class="course-title">
+                <h3 class="sub-heading">A lot to choose from actually...</h3>
+                <h1 class="heading">Courses Offered</h3>
+              </div>
+              <div class="filter-btns">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter=".business">Business</button>
+                <button class="filter-btn" data-filter=".design">Art and Design</button>
+                <button class="filter-btn" data-filter=".dev">Programming and Development</button>
+              </div>
+            </div>
+            <div class="course-gallery">
+              <div class="mix course-card business">
+                <div class="course-image">
+                  <img src="./images/courses/social.jpg" alt="">
+                    <div class="course-overlay">
+                      <span class="course-icon" style="--i: 0s">
+                        <i class='bx bx-add-to-queue'></i>
+                      </span>
+                      <a href="#" class="course-icon" style="--i: 0.15s">
+                        <i class='bx bx-link-external' ></i>
+                      </a>
+                    </div>
+                </div>
+                <div class="course-desc">
+                  <h3>Social Media Marketing</h3>
+                  <a href="#" class="btn secondary-btn sm">Enroll Now</a>
+                </div>
+              </div>
+
+              <div class="mix course-card design">
+                <div class="course-image">
+                  <img src="./images/courses/fashion.jpg" alt="">
+                  <div class="course-overlay">
+                    <span class="course-icon" style="--i: 0s">
+                      <i class='bx bx-add-to-queue'></i>
+                    </span>
+                    <a href="#" class="course-icon" style="--i: 0.15s">
+                      <i class='bx bx-link-external' ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-desc">
+                  <h3>Fashion Design</h3>
+                  <a href="#" class="btn secondary-btn sm">Enroll Now</a>
+                </div>
+              </div>
+
+              <div class="mix course-card business">
+                <div class="course-image">
+                  <img src="./images/courses/business.jpg" alt="">
+                  <div class="course-overlay">
+                    <span class="course-icon" style="--i: 0s">
+                      <i class='bx bx-add-to-queue'></i>
+                    </span>
+                    <a href="#" class="course-icon" style="--i: 0.15s">
+                      <i class='bx bx-link-external' ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-desc">
+                  <h3>Business Studies</h3>
+                  <a href="#" class="btn secondary-btn sm">Enroll Now</a>
+                </div>
+              </div>
+
+              <div class="mix course-card design">
+                <div class="course-image">
+                  <img src="./images/courses/design.png" alt="">
+                  <div class="course-overlay">
+                    <span class="course-icon" style="--i: 0s">
+                      <i class='bx bx-add-to-queue'></i>
+                    </span>
+                    <a href="#" class="course-icon" style="--i: 0.15s">
+                      <i class='bx bx-link-external' ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-desc">
+                  <h3>Kinetic Design</h3>
+                  <a href="#" class="btn secondary-btn sm">Enroll Now</a>
+                </div>
+              </div>
+
+              <div class="mix course-card business">
+                <div class="course-image">
+                  <img src="./images/courses/planning.jpg" alt="">
+                  <div class="course-overlay">
+                    <span class="course-icon" style="--i: 0s">
+                      <i class='bx bx-add-to-queue'></i>
+                    </span>
+                    <a href="#" class="course-icon" style="--i: 0.15s">
+                      <i class='bx bx-link-external' ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-desc">
+                  <h3>Management and Planning</h3>
+                  <a href="#" class="btn secondary-btn sm">Enroll Now</a>
+                </div>
+              </div>
+
+              <div class="mix course-card dev">
+                <div class="course-image">
+                  <img src="./images/courses/programming.jpeg" alt="">
+                  <div class="course-overlay">
+                    <span class="course-icon" style="--i: 0s">
+                      <i class='bx bx-add-to-queue'></i>
+                    </span>
+                    <a href="#" class="course-icon" style="--i: 0.15s">
+                      <i class='bx bx-link-external' ></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="course-desc">
+                  <h3>Introduction to Programming</h3>
+                  <a href="#" class="btn secondary-btn sm">Enroll Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonials section" id="testimonials">
+          <div class="container">
+            <div class="section-background">
+              <img src="./images/testi-pointer.png" class="pointer" alt="">
+              <img src="./images/circle2.png" class="circle" alt="">
+              <img src="./images/square1.png" class="square" alt="">
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="user">
+                    <img src="./images/testimonial1.png" alt="">
+                    <div class="user-info">
+                      <h4>Abhijit Mandal</h4>
+                      <h5>B.Tech Student</h5>
+                    </div>
+                  </div>
+                  <q class="text">
+                    The User Interface here is so intuitive. Every since I started learning from
+                    the best teachers here, my academics have improved and I acquired some new skills like
+                    marketing, pitching, etc.
+                  </q>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="user">
+                    <img src="./images/testimonial3.png" alt="">
+                    <div class="user-info">
+                      <h4>Shivam Sharma</h4>
+                      <h5>B.Tech Student</h5>
+                    </div>
+                  </div>
+                  <q class="text">
+                    This has got to be the best learning environment we've had. Not only we are getting to learn new skills and learning
+                    from the best teachers, my specialisation studies also don't get disturbed. I get to perform the best in both areas.
+                  </q>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="user">
+                    <img src="./images/testimonial2.png" alt="">
+                    <div class="user-info">
+                      <h4>Aman Saini</h4>
+                      <h5>Programming Professor</h5>
+                    </div>
+                  </div>
+                  <q class="text">
+                    This program lets teachers like me teach students in a new way. Students get to learn industry leading skills,
+                    while we get to be in a teaching ecosystem that benefits them and us alike.
+                  </q>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+                
+            </div>
+            <div class="testimonials-title">
+              <h3 class="sub-heading">Hear what people say about us!</h3>
+              <h1 class="heading">Feedback and Review</h1>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact section" id="contact">
+          <img src="./images/triangle.png" alt="" class="shape triangle">
+          <div class="container">
+            <img src="./images/unused/square2.png" alt="" class="shape square">
+            <div class="contact-info">
+              <h3 class="sub-heading">wanna enroll or Faced an issue?</h3>
+              <h1 class="heading">Contact Support Team</h1>
+              <p class="text">Say you have login issues? or don't know where to start? Or you want to report a bug? <br>
+              Now do it all with one simple form.</p>
+
+              <a href="mailto:sharmahardik0256@gmail.com" class="mail">sharmahardik0256@gmail.com 
+                <i class='bx bx-right-arrow-circle'></i>
+              </a>
+            </div>
+            <form action="" class="contact-form">
+              <h3>Send us a message</h3>
+              <input type="text" class="form-input" placeholder="Your Name" required>
+              <input type="email" class="form-input" placeholder="Your Email" required>
+              <textarea placeholder="Issue Details" class="form-input" required></textarea>
+              <input type="submit" value="Send Report" class="btn">
+            </form>
+          </div>
+        </section>
     </main>
+
+    <!-- ======================== Footer =============================== -->
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <img src="images/su_alt.png" alt="TDL iON">
+        </div>
+        <p class="text">&copy; Copyright 2022. All rights reserved</p>
+        <ul class="social-media">
+          
+          <li>
+            <a href="#" class="social-link">
+              <i class='bx bxl-facebook' ></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class='bx bxl-linkedin' ></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class='bx bxl-instagram' ></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
     <!-- --------- JS Files ---------- -->
+    <!-- --------------- Swiper ---------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- --------------------- MixItUp ------------------------- -->
+    <script src="mixitup.min.js"></script>
+
+    <!-- ------------------------ home js -------------- -->
     <script src="home.js"></script>
+    
 </body>
 
 </html>
