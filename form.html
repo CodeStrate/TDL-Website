@@ -13,6 +13,13 @@
 </head>
 <body>
     <main>
+        <div class="theme-toggle">
+            <i class='bx bx-sun active' ></i>
+            <i class='bx bx-moon' ></i>
+            <div class="toggle-switch">
+                <span class="switch"></span>
+            </div>
+        </div>
         <div class="container">
             <div class="inner-box">
                 <div class="forms-wrap">
@@ -59,7 +66,63 @@
                        </p>
                         </div>
                     </form>
+
+                    <form action="index.html" class="sign-up-form" autocomplete="off">
+                        <div class="logo">
+                            <img src="images/su_alt.png" alt="TDL iON">
+                        </div>
+
+                        <div class="heading">
+                            <h2>Get Started</h2>
+                            <h6>Already have an Account?</h6>
+                            <a href="#" class="toggle">Sign In</a>
+                        </div>
+
+                        <div class="start-form">
+                           <div class="input-wrap">
+                                <input
+                                type="text"
+                                minlength="15"
+                                class="input-field"
+                                autocomplete="off"
+                                required
+                                />
+                                <label>Username</label>
+
+                           </div>
+                           
+                           <div class="input-wrap">
+                            <input
+                            type="email"
+                            class="input-field"
+                            autocomplete="off"
+                            required
+                            />
+                            <label>Email</label>
+
+                       </div>
+
+                           <div class="input-wrap">
+                            <input
+                            type="password"
+                            minlength="8"
+                            class="input-field"
+                            autocomplete="off"
+                            required
+                            />
+                            <label>Password</label>
+
+                       </div> 
+
+                       <input type="submit" value="Sign Up" class="sign-btn">
+                       <p class="text">
+                        By signing up, I agree to the <a href="#">Terms of Services</a> and
+                        <a href="#">Privacy Policies</a>
+                       </p>
+                        </div>
+                    </form>
                 </div>
+
                 <div class="carousel">
                         <div class="images-wrapper">
                             <img src="images/image1.png" class="image img-1 show" alt="" />
@@ -90,7 +153,7 @@
 
 
 <!-- ---------------- JS File for form --------------------- -->
-    <script src="app.js"></script>
+    <script src="form.js"></script>
 </body>
 
 </html>

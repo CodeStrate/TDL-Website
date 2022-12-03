@@ -1,8 +1,10 @@
 const inputs = document.querySelectorAll(".input-field");
+const toggle_btn = document.querySelectorAll(".toggle");
+const main = document.querySelector("main");
 const bullets = document.querySelectorAll(".bullets span");
 const images = document.querySelectorAll(".image");
 const textSlider = document.querySelector(".text-group");
-
+const themeToggle = document.querySelector(".theme-toggle");
 
 inputs.forEach((input) => {
     input.addEventListener("focus", () => {
@@ -12,6 +14,12 @@ inputs.forEach((input) => {
         if(input.value != "") return;
         input.classList.remove("active");
     }); 
+});
+
+toggle_btn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        main.classList.toggle("sign-up-mode");
+    });
 });
 
 function moveSlider(){
@@ -30,4 +38,10 @@ function moveSlider(){
 
 bullets.forEach((bullet) => {
     bullet.addEventListener("click", moveSlider);
-})
+});
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle('dark');
+    themeToggle.querySelector('i:nth-child(1)').classList.toggle('active');
+    themeToggle.querySelector('i:nth-child(2)').classList.toggle('active');
+});

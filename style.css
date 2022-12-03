@@ -51,7 +51,7 @@ body{
 body.dark{
     --body-color: #18191A;
     --sidebar-color: #242020;
-    --primary-color: #3a3b3c;
+    --primary-color: #ff284c;
     --primary-color-lightmode: #3a3b3c;
     --toggle-color: #ffffff;
     --a-color: #ffffff;
@@ -91,8 +91,6 @@ body.dark .activity-data::-webkit-scrollbar-thumb:hover{
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;
-
-
 }
 
 .sidebar.close{
@@ -110,6 +108,7 @@ body.dark .activity-data::-webkit-scrollbar-thumb:hover{
 
 .sidebar.close .text{
     opacity: 0;
+    pointer-events: none;
 }
 
 .sidebar .image{
@@ -193,7 +192,7 @@ header .image-text .header-text{
 }
 
 body.dark .sidebar header .toggle{
-    color: var(--text-color);
+    color: var(--toggle-color);
 }
 
 .search-box .menu{
@@ -242,7 +241,7 @@ body.dark .sidebar header .toggle{
 
 body.dark li a:hover .icon,
 body.dark li a:hover .text{
-    color: var(--text-color);
+    color: var(--toggle-color);
 }
 
 .sidebar .menu-bar{
@@ -612,6 +611,83 @@ body.dark .switch::before{
     gap: 1rem;
 }
 
+.right .analytics{
+    
+    margin-left: 6rem;
+    margin-top: 1rem;
+}
+
+.right .analytics h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .analytics .assign{
+    background: var(--sidebar-color);
+    padding: 1.4rem var(--card-padding);
+    border-radius: 1.6rem;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: .7rem;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .analytics .assign:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.right .analytics .assign .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .analytics .assign h5{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.right .analytics .assign h3{
+    color: var(--text-color);
+}
+
+.right .analytics .assign small{
+    color: var(--toggle-color);
+}
+
+h5.doing{
+    color: var(--card1-color);
+}
+
+h5.pending{
+    color: var(--card2-color);
+}
+
+h5.done{
+    color: var(--card3-color);
+}
+
+.right .analytics .assign i{
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    padding: .6rem;
+    border-radius: 50%;
+    background: var(--card1-color);
+}
+
+.right .analytics .assign.pending i{
+    background: var(--card2-color);
+}
+
+.right .analytics .assign.done i{
+    background: var(--card3-color);
+}
+
 .right .profile-photo{
     display: flex;
     gap: 2rem;
@@ -660,4 +736,15 @@ body.dark .switch::before{
 .update .message .text-muted{
     font-weight: 300;
     color: var(--toggle-color);
+}
+
+/* ============= Media Queries ================== */
+@media screen and (max-width: 1200px){
+    body{
+        width: 94%;
+    }
+    .header-text .title,
+    .header-text .name{
+        display: none;
+    }
 }

@@ -5,6 +5,17 @@
 }
 
 :root{
+    /* Colors */
+    --back-color: #ff012d;
+    --main-color: #ff284c;
+    --select-color: #fff;
+    --form-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.3);
+    --bold-color: #3a3b3c;
+    --toggle-color: #dcdcdc;
+    --medium-color: #585858;
+    --muted-color: #bababa;
+    --carousel-color: #ffe6e6;
+
      /* Transitions */
      --tran-02: all 0.2s ease;
      --tran-03: all 0.3s ease;
@@ -14,8 +25,8 @@
 }
 
 ::selection{
-    background-color: #ff012d;
-    color: #fff;
+    background-color: var(--back-color);
+    color: var(--select-color);
 }
 
 *, *::before, *::after{
@@ -24,25 +35,79 @@
     box-sizing: border-box;
 }
 
+body.dark{
+    /* Colors */
+    --back-color: #ff284c;
+    --main-color: #242020;
+    --select-color: #18191A;
+    --form-shadow: 0 60px 40px -30px rgba(216, 216, 216, 0.105);
+    --bold-color: #fff;
+    --toggle-color: #272727;
+    --medium-color: #fef6f6;
+    --muted-color: #d3d3d3;
+    --carousel-color: #b9b9b9;
+}
+
 main{
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background: #ff284c;
+    background: var(--main-color);
     padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 500ms ease;
 }
+
+main .theme-toggle{
+    margin: 0 .4rem 0;
+    margin-bottom: 40rem;
+}
+
+.theme-toggle{
+    background: var(--bold-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 2rem;
+    width: 4rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.theme-toggle i{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--toggle-color);
+}
+
+
+.theme-toggle i.active{
+    background: var(--toggle-color);
+    color: var(--bold-color);
+    border-radius: .3rem;
+    transition: var(--tran-03);
+}
+
+.theme-toggle .toggle-switch{
+    transition: var(--tran-04);
+}
+
 
 .container{
     position: relative;
     width: 100%;
     max-width: 1020px;
     height: 640px;
-    background-color: #fff;
+    background-color: var(--select-color);
     border-radius: 3.2rem;
-    box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--form-shadow);
+    transition: var(--tran-04);
 }
 
 .inner-box{
@@ -51,6 +116,7 @@ main{
     height: calc(100% - 4rem);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+    transition: var(--tran-03);
 }
 
 .forms-wrap{
@@ -58,17 +124,28 @@ main{
     height: 100%;
     width: 45%;
     top: 0; left:0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    transition: .8s ease-in-out;
 }
 
 form{
-    max-width: 260px;
+    max-width: 270px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    transition: opacity 0.02s 0.4s;
+}
 
+form.sign-up-form{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .logo{
@@ -84,18 +161,18 @@ form{
 .heading h2{
     font-size: 2.1rem;
     font-weight: 600;
-    color: #585858;
+    color: var(--medium-color);
 }
 
 .heading h6{
     font-size: .8rem;
     font-weight: 400;
-    color: #bababa;
+    color: var(--muted-color);
     display: inline;
 }
 
 .toggle{
-    color: #3a3b3c;
+    color: var(--bold-color);
     text-decoration: none;
     font-size: .8rem;
     font-weight: 500;
@@ -103,7 +180,7 @@ form{
 }
 
 .toggle:hover{
-    color: #ff012d;
+    color: var(--back-color);
 }
 
 .input-wrap{
@@ -120,10 +197,10 @@ form{
     background: none;
     border: none;
     outline: none;
-    border-bottom: 1px solid #bababa;
+    border-bottom: 1px solid var(--muted-color);
     padding: 0;
     font-size: 1rem;
-    color: #3a3b3c;
+    color: var(--bold-color);
     transition: var(--tran-04);
 }
 
@@ -133,14 +210,14 @@ label{
     top: 50%;
     transform: translateY(-50%);
     font-size: 1rem;
-    color: #bababa;
+    color: var(--muted-color);
     pointer-events: none;
     transition: var(--tran-04);
 
 }
 
 .input-field.active{
-    border-bottom-color: #ff012d;
+    border-bottom-color: var(--back-color);
 
 }
 
@@ -153,8 +230,8 @@ label{
     display: inline-block;
     width: 100%;
     height: 44px;
-    background-color: #3a3b3c;
-    color: #fff;
+    background-color: var(--bold-color);
+    color: var(--select-color);
     border: none;
     cursor: pointer;
     border-radius: .8rem;
@@ -164,21 +241,39 @@ label{
 }
 
 .sign-btn:hover{
-    background-color: #ff012d;
+    background-color: var(--back-color);
 }
 
 .text{
-    color: #bababa;
+    color: var(--muted-color);
     font-size: .7rem;
 }
 
 .text a{
-    color: #bababa;
+    color: var(--muted-color);
     transition: var(--tran-03);
 }
 
 .text a:hover{
-    color: #ff012d;
+    color: var(--back-color);
+}
+
+main.sign-up-mode .forms-wrap{
+    left: 55%;
+}
+
+main.sign-up-mode form.sign-in-form{
+    opacity: 0;
+    pointer-events: none;
+}
+
+main.sign-up-mode form.sign-up-form{
+    opacity: 1;
+    pointer-events: all;
+}
+
+main.sign-up-mode .carousel{
+    left: 0%;
 }
 
 .carousel{
@@ -187,12 +282,13 @@ label{
     width: 55%;
     left: 45%;
     top: 0;
-    background-color: #ffe6e6;
+    background-color: var(--carousel-color);
     border-radius: 2rem;
     display: grid;
     grid-template-rows: auto 1fr; /* auto for images-wrapper, 1fr for text-slider */
     padding-bottom: 2rem;
     overflow: hidden;
+    transition: .8s ease-in-out;
     transition: var(--tran-08);
 }
 
@@ -264,7 +360,7 @@ label{
     display: block;
     width: 0.5rem;
     height: 0.5rem;
-    background-color: #3a3b3c;
+    background-color: var(--bold-color);
     margin: 0 0.27rem;
     border-radius: 50%;
     cursor: pointer;
@@ -274,6 +370,6 @@ label{
 
 .bullets span.active{
     width: 1.2rem;
-    background-color: #ff284c;
+    background-color: var(--main-color);
     border-radius: 1rem;
 }
