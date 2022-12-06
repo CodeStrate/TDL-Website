@@ -15,7 +15,7 @@
     /* Colors */
     --back-color: #fdeff1;
     --main-color: #ff284c;
-    --accent-color: #5e28ff;
+    --accent-color: #4327de;
     --highlight-color: #ff546b;
     --select-color: #fff;
     --transparent-color: rgba(255,255,255,0.6);
@@ -377,7 +377,27 @@ i.toggle-btn{
 }
 
 i.toggle-btn:hover{
-    filter: brightness(95%);
+    filter: brightness(80%);
+}
+
+i.sign-btn{
+    margin-left: 5rem;
+    color: var(--medium-color);
+    min-width: 30px; height: 30px;
+    background-color: var(--toggle-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: var(--box-shadow-toggle);
+    transition: var(--tran-03);
+    cursor: pointer;
+}
+
+i.sign-btn:hover{
+    color: var(--select-color);
+    background-color: var(--highlight-color);
 }
 
 /* ===================== Showcase Styling ======================================= */
