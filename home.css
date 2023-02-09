@@ -180,6 +180,8 @@ ul{
     display: inline-block;
     padding: .9rem 1.75rem;
     border-radius: 7rem;
+    min-width: 125px;
+    text-align: center;
     background-color: var(--bold-color);
     color: var(--select-color);
     outline: none;
@@ -1046,4 +1048,80 @@ footer .social-media{
 
 .social-link:hover{
     background-color: var(--highlight-color);
+}
+
+
+/* ============ 1000px Screen responsive ============= */
+
+@media (max-width: 1000px){
+    .sub-heading{
+        font-size: .75rem;
+    }
+
+    .heading{
+       font-size:2rem;
+    }
+
+    .showcase-area .heading{
+        font-size: 2.7rem;
+    }
+
+    .text{
+        font-size: .84rem;
+        margin: 1.3rem 0;
+    }
+
+    .btn{
+        padding: 0.8rem 1.6rem;
+        font-size: .8rem;
+        min-width: 100px;
+        border-radius: 15px;
+
+    }
+
+    .btn.secondary-btn{
+        font-size: .85rem;
+    }
+
+    .form-input{
+        padding: .8rem 1.45rem;
+        border-radius: 15px;
+        font-size: .8rem;
+    }
+    .logo{
+        height: 110px;
+    }
+
+    .logo img{
+        width: 105px;
+    }
+
+    header .logo img{
+        margin-top: 2rem;
+    }
+
+    .nav-link{
+        font-size: .7rem;
+    }
+
+    .showcase-area{
+        padding: 100px 0;
+    }
+
+    .showcase-area .container{
+        grid-template-columns: 1fr 400px;
+        height: 450px;
+    }
+
+    .progress .container{
+        column-gap: 2.5rem;
+    }
+
+    .contact .container{
+        column-gap: 2.5rem;
+    }
+
+    .contact-form{
+        padding: 2.5rem 2rem;
+    }
 }
