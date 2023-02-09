@@ -1,10 +1,10 @@
 const inputs = document.querySelectorAll(".input-field");
-const toggle_btn = document.querySelectorAll(".toggle");
+const toggle = document.querySelectorAll(".toggle");
 const main = document.querySelector("main");
+const themeToggle = document.querySelector(".toggle-btn");
 const bullets = document.querySelectorAll(".bullets span");
 const images = document.querySelectorAll(".image");
 const textSlider = document.querySelector(".text-group");
-const themeToggle = document.querySelector(".theme-toggle");
 
 inputs.forEach((input) => {
     input.addEventListener("focus", () => {
@@ -16,7 +16,7 @@ inputs.forEach((input) => {
     }); 
 });
 
-toggle_btn.forEach((btn) => {
+toggle.forEach((btn) => {
     btn.addEventListener("click", () => {
         main.classList.toggle("sign-up-mode");
     });
@@ -40,8 +40,16 @@ bullets.forEach((bullet) => {
     bullet.addEventListener("click", moveSlider);
 });
 
+function changeTheme(){
+    if(!document.body.classList.contains("dark")) {
+        document.body.classList.add("dark");
+        themeToggle.classList.replace("bx-moon", "bx-sun");
+    }else{
+        document.body.classList.remove("dark");
+        themeToggle.classList.replace("bx-sun", "bx-moon");   
+    }
+}
+
 themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle('dark');
-    themeToggle.querySelector('i:nth-child(1)').classList.toggle('active');
-    themeToggle.querySelector('i:nth-child(2)').classList.toggle('active');
-});
+    changeTheme();
+})
