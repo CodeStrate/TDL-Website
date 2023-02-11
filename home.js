@@ -6,8 +6,10 @@ const ml_counters = document.querySelectorAll(".number span");
 const links = document.querySelectorAll(".nav-link");
 const toggle_btn = document.querySelector(".toggle-btn");
 
+const enrollBtns = document.querySelectorAll(".btn.secondary-btn.sm");
+
 window.addEventListener("scroll", () => {
-    // activeLink();
+    activeLink();
    if(!mlPlayed) mlCounter(); 
 });
 
@@ -93,20 +95,20 @@ const swiper = new Swiper('.swiper', {
 
 // --------------------- Change Active link --------------------------
 
-// function activeLink(){
-//     let sections = document.querySelectorAll("section[id]");
-//     let passedSections = Array.from(sections).map((sct, i) => {
-    //         return {
-//             y: sct.getBoundingClientRect().top - header.offsetHeight,
-//             id: i,
-//         };
-//     }).filter(sct => sct <= 0);
+function activeLink(){
+   let sections = document.querySelectorAll("section[id]");
+   let passedSections = Array.from(sections).map((sct, i) => {
+    return { y: sct.getBoundingClientRect().top - header.offsetHeight,
+            id: i,
+        };
+   }).filter(sct => sct.y <= 0);
 
-//     let currentSectionID = passedSections.at(-1).id;
+   let currSectionID = passedSections.at(-1).id;
+   links.forEach(l => l.classList.remove("active"));
+   links[currSectionID].classList.add("active");
+}
 
-//     links.forEach((link) => link.classList.remove("active"));
-//     links[currentSectionID].classList.add("active");
-// }
+activeLink();
 
 
 // --------------------- Change Page Theme --------------------------
@@ -123,4 +125,18 @@ function changeTheme(){
 
 toggle_btn.addEventListener("click", () => {
     changeTheme();
+})
+
+
+// --------------------- Enroll Button --------------------------
+
+
+enrollBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        if(btn.innerText == "Enroll Now") {
+            btn.innerText = "Enrolled";
+        }else{
+            btn.innerText = "Enroll Now";
+        }
+    });
 })
