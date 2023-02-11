@@ -1,12 +1,20 @@
 const header = document.querySelector("header");
 
 const ml_section = document.querySelector(".milestones");
+
 const ml_counters = document.querySelectorAll(".number span");
 
 const links = document.querySelectorAll(".nav-link");
+
 const toggle_btn = document.querySelector(".toggle-btn");
 
 const enrollBtns = document.querySelectorAll(".btn.secondary-btn.sm");
+
+const crs_section = document.querySelector(".courses");
+
+const crs_icons = document.querySelectorAll(".info-icon");
+
+const modal_overlay = document.querySelector(".modal-overlay");
 
 window.addEventListener("scroll", () => {
     activeLink();
@@ -79,6 +87,18 @@ let mixer = mixitup(".course-gallery", {
         duration: 500
     }
 });
+
+// --------------------- Course Modal Pop Up Animation --------------------------
+
+crs_icons.forEach((icon) => icon.addEventListener("click", () => {
+    crs_section.classList.add("open");
+}));
+
+modal_overlay.addEventListener("click", () => {
+    crs_section.classList.remove("open");
+});
+
+
 
 // --------------------- Testimonial Swiper Animation --------------------------
 
