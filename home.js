@@ -92,10 +92,12 @@ let mixer = mixitup(".course-gallery", {
 
 crs_icons.forEach((icon) => icon.addEventListener("click", () => {
     crs_section.classList.add("open");
+    document.body.classList.add("stopScrolling");
 }));
 
 modal_overlay.addEventListener("click", () => {
     crs_section.classList.remove("open");
+    document.body.classList.remove("stopScrolling");
 });
 
 

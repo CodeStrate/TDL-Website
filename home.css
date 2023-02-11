@@ -110,6 +110,11 @@ body{
     transition: var(--tran-03);
 }
 
+body.stopScrolling{
+    height: 100%;
+    overflow: hidden;
+}
+
 a{
     text-decoration: none;
 }
@@ -694,6 +699,10 @@ i.sign-btn:hover{
 /* --------------- Courses Section Styling --------------- */
 
 
+.courses .container{
+    transition: 0.4s ease-in-out;
+}
+
 .course-header{
     display: flex;
     align-items: flex-end;
@@ -832,7 +841,6 @@ i.sign-btn:hover{
     top: 0; left: 0;
     background-color: var(--transparent-color);
     backdrop-filter: blur(3px);
-    z-index: 11;
     opacity: 0;
     transition: var(--tran-03);
     
@@ -852,12 +860,21 @@ i.sign-btn:hover{
     box-shadow: var(--box-shadow);
     align-items: center;
     opacity: 0;
+    transition: var(--tran-03);
 }
 
 .modal-card{
     padding: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.modal-b{
+    opacity: 1;
+}
+
+.modal-prg, .modal-pl, .modal-d, .modal-s, .modal-f{
+    display: none;
 }
 
 .modal-content h3{
@@ -923,6 +940,15 @@ i.sign-btn:hover{
     opacity: 1;
 }
 
+.courses.open .container{
+    transform: scale(.9);
+}
+
+.courses.open .slider-wrap{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.45s 0.1s;
+}
 
 /* --------------- Testimonials Section Styling --------------- */
 
