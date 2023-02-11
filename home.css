@@ -864,18 +864,16 @@ i.sign-btn:hover{
 }
 
 .modal-card{
+    display: none;
+}
+
+.modal-card.show{
     padding: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.modal-b{
-    opacity: 1;
-}
 
-.modal-prg, .modal-pl, .modal-d, .modal-s, .modal-f{
-    display: none;
-}
 
 .modal-content h3{
     border-left: 3px solid var(--main-color);
@@ -924,13 +922,10 @@ i.sign-btn:hover{
 
 .slider-wrap .modal-image img{
     width: 100%;
-    display: none;
+    display: block;
     border-radius: 1rem;
 }
 
-.slider-wrap img.showImage{
-    display: block;
-}
 
 .courses.open .modal{
     pointer-events: auto;
